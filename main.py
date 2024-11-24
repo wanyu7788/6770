@@ -20,5 +20,6 @@ def read_root():
   return {"Hello": "Wanyu Zhang"}
 
 @app.get("/uni/wz2652")
-def read_item(uni_id: str, q: Union[str, None] = None):
-    return {"uni_id": "wz2652", "q": q}
+def read_item(uni_id: str = "wz2652", q: Union[str, None] = None):
+    return {"uni_id": uni_id, "q": q}
+
